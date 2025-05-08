@@ -4,6 +4,11 @@ stages:
     actors:
       TDMDBSchema:
         parent: TDMDBSchema
+        in:
+          table:
+            const:
+            - schema_name: TDMDB_SCHEMA
+              schema_value: public
         out:
           table:
             schema: '#ref'
