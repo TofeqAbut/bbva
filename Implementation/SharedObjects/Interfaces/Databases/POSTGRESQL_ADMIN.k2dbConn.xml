@@ -2,12 +2,12 @@
 <DBConn xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="DBConnGenericAdoJdbc" name="POSTGRESQL_ADMIN" type="genericdb" version="8.2.0">
     <JdbcDriverName>PostgreSQL</JdbcDriverName>
     <Active>true</Active>
-    <DataSource>34.89.246.193</DataSource>
+    <DataSource>localhost</DataSource>
     <PortNum>5432</PortNum>
     <DataBase>postgres</DataBase>
-    <UserId>admin</UserId>
-    <Password>~encs2~X5O1tAeiTVrSTi+gXPQLYu/WJgU+eetI7HTzhco6UjNskCoaO4K7lQ==</Password>
-    <ConnectionStringServerSide>jdbc:postgresql://34.89.246.193:5432/postgres?stringtype=unspecified</ConnectionStringServerSide>
+    <UserId>postgres</UserId>
+    <Password>~encs2~9Uo/4pgvqDLvnikJYdXk51oue6azO7Do910MU8unkKl0cDOFml1SPA==</Password>
+    <ConnectionStringServerSide>jdbc:postgresql://localhost:5432/postgres?stringtype=unspecified</ConnectionStringServerSide>
     <MinConnectionsNumber>0</MinConnectionsNumber>
     <MaxConnectionsNumber>60</MaxConnectionsNumber>
     <SchemaFilter></SchemaFilter>
