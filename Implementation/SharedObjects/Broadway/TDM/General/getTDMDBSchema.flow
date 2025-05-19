@@ -8,7 +8,7 @@ stages:
           table:
             const:
             - schema_name: TDMDB_SCHEMA
-              schema_value: public
+              schema_value: tdddm
         out:
           table:
             schema: '#ref'
