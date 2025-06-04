@@ -4,10 +4,10 @@
     <Active>true</Active>
     <DataSource>34.89.246.193</DataSource>
     <PortNum>5432</PortNum>
-    <DataBase>postgres</DataBase>
-    <UserId>admin</UserId>
-    <Password>~encs2~RW37GPQLZ0jWqzmpAdjrt3IMmGDn/3g0Pi2OY1kMNxBNUBuERWCAtA==</Password>
-    <ConnectionStringServerSide>jdbc:postgresql://34.89.246.193:5432/postgres?stringtype=unspecified</ConnectionStringServerSide>
+    <DataBase>bbva</DataBase>
+    <UserId>bbva</UserId>
+    <Password>~encs2~+e2Iib5k2TtunYzQTy3F2YtA3i1kEaJ7q14xDMpjm8kubqDs</Password>
+    <ConnectionStringServerSide>jdbc:postgresql://34.89.246.193:5432/bbva?stringtype=unspecified</ConnectionStringServerSide>
     <MinConnectionsNumber>0</MinConnectionsNumber>
     <MaxConnectionsNumber>60</MaxConnectionsNumber>
     <SchemaFilter></SchemaFilter>

@@ -5,8 +5,8 @@
     <DataSource>34.89.246.193</DataSource>
     <PortNum>5432</PortNum>
     <DataBase>TDMDB</DataBase>
-    <UserId>admin</UserId>
-    <Password>~encs2~0CHzvvWf+hZltSiSf7fFCmOkfFtiY1OD8SERXVIzy/cIuOOKiGWM3Q==</Password>
+    <UserId>bbva</UserId>
+    <Password>~encs2~faumVQJYxbiNxEn2EKV2F647EVR+hjxOO58qZ9AXCj9+xc6c</Password>
     <ConnectionStringServerSide>jdbc:postgresql://34.89.246.193:5432/TDMDB?stringtype=unspecified</ConnectionStringServerSide>
     <MinConnectionsNumber>0</MinConnectionsNumber>
     <MaxConnectionsNumber>60</MaxConnectionsNumber>
