@@ -23,9 +23,9 @@ stages:
         parent: DbCommand
         in:
           interface:
-            const: Oracle1
+            const: fabric
           sql:
-            const: select * from Customer.CUSTOMER
+            const: select *  from Customer.CUSTOMER
   Stage 3:
     actors:
       DbLoad1:
