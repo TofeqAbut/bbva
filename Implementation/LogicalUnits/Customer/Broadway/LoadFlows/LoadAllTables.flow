@@ -1,0 +1,29 @@
+tags: LoadFlows
+stages:
+  Stage 1: {
+    }
+  Stage 2:
+    actors:
+      load_customer1:
+        parent: InnerFlow
+        in:
+          flowName:
+            const: load_customer
+          iid:
+            schema: string
+            mandatory: false
+          luName:
+            schema: string
+            editor:
+              id: com.k2view.logicalUnit
+              addEmptyEntry: true
+            mandatory: false
+          syncMode:
+            schema: string
+            editor:
+              id: com.k2view.dropdown
+              options:
+              - 'ON'
+              - 'OFF'
+              - FORCE
+            mandatory: false
