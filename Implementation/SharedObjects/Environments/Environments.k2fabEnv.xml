@@ -5,7 +5,7 @@
     <Environment enabled="true" name="DC1">
       <Comments>DC1</Comments>
       <DbInterfacesList>
-        <DbInterface xsi:type="DBSourceGenericDb" k2StudioObjectName="AI_DB" dbType="genericdb" active="true">
+        <DbInterface xsi:type="DBSourceGenericDb" k2StudioObjectName="AI_DB" dbType="genericdb" active="false">
           <dbHost></dbHost>
           <dbPort>5432</dbPort>
           <dbScheme></dbScheme>
@@ -15,6 +15,18 @@
           <minConnectionsNumber>0</minConnectionsNumber>
           <maxConnectionsNumber>60</maxConnectionsNumber>
           <JdbcDriverName>PostgreSQL</JdbcDriverName>
+          <IsCustomConnectionStringServerSide>false</IsCustomConnectionStringServerSide>
+        </DbInterface>
+        <DbInterface xsi:type="DBSourceGenericDb" k2StudioObjectName="Oracle1" dbType="genericdb" active="true">
+          <dbHost>34.89.246.193</dbHost>
+          <dbPort>1521</dbPort>
+          <dbScheme>XEPDB1</dbScheme>
+          <dbUser>Customer</dbUser>
+          <dbPasswordEncrypted>~encs2~q1AWarVR1bWVEUV36kjx/ENr0eR2y8DV0s+gLx9aNI/kswsXvftH+rPhhg&#x3D;&#x3D;</dbPasswordEncrypted>
+          <connString>jdbc:oracle:thin:@34.89.246.193:1521/XEPDB1</connString>
+          <minConnectionsNumber>0</minConnectionsNumber>
+          <maxConnectionsNumber>60</maxConnectionsNumber>
+          <JdbcDriverName>Oracle</JdbcDriverName>
           <IsCustomConnectionStringServerSide>false</IsCustomConnectionStringServerSide>
         </DbInterface>
         <DbInterface xsi:type="DBSourceGenericDb" k2StudioObjectName="POSTGRESQL_ADMIN" dbType="genericdb" active="true">
@@ -41,18 +53,6 @@
           <JdbcDriverName>PostgreSQL</JdbcDriverName>
           <IsCustomConnectionStringServerSide>false</IsCustomConnectionStringServerSide>
         </DbInterface>
-        <DbInterface xsi:type="DBSourceGenericDb" k2StudioObjectName="Oracle1" dbType="genericdb" active="true">
-          <dbHost>34.89.246.193</dbHost>
-          <dbPort>1521</dbPort>
-          <dbScheme>XEPDB1</dbScheme>
-          <dbUser>Customer</dbUser>
-          <dbPasswordEncrypted>~encs2~q1AWarVR1bWVEUV36kjx/ENr0eR2y8DV0s+gLx9aNI/kswsXvftH+rPhhg&#x3D;&#x3D;</dbPasswordEncrypted>
-          <connString>jdbc:oracle:thin:@34.89.246.193:1521/XEPDB1</connString>
-          <minConnectionsNumber>0</minConnectionsNumber>
-          <maxConnectionsNumber>60</maxConnectionsNumber>
-          <JdbcDriverName>Oracle</JdbcDriverName>
-          <IsCustomConnectionStringServerSide>false</IsCustomConnectionStringServerSide>
-        </DbInterface>
       </DbInterfacesList>
       <GlobalsList>
         <Global name="INSTANCES_RANDOM_MAX" luName="TDM">
@@ -347,7 +347,7 @@
             </Property>
           </Properties>
         </GenericInterface>
-        <GenericInterface type="HTTP" enabled="true" version="">
+        <GenericInterface type="HTTP" enabled="false" version="">
           <Name>AI_Execution</Name>
           <Properties>
             <Property name="ProtocolType">
@@ -398,6 +398,9 @@
             <Property name="Certificate">
               <Value></Value>
             </Property>
+            <Property name="testConnectionState">
+              <Value>error</Value>
+            </Property>
           </Properties>
         </GenericInterface>
       </GenericInterfacesList>
@@ -405,7 +408,7 @@
     <Environment enabled="true" name="DC2">
       <Comments></Comments>
       <DbInterfacesList>
-        <DbInterface xsi:type="DBSourceGenericDb" k2StudioObjectName="AI_DB" dbType="genericdb" active="true">
+        <DbInterface xsi:type="DBSourceGenericDb" k2StudioObjectName="AI_DB" dbType="genericdb" active="false">
           <dbHost>34.89.246.193</dbHost>
           <dbPort>5432</dbPort>
           <dbScheme>XEPDB1</dbScheme>
@@ -417,6 +420,18 @@
           <JdbcDriverName>PostgreSQL</JdbcDriverName>
           <IsCustomConnectionStringServerSide>false</IsCustomConnectionStringServerSide>
           <Certificate>asdf</Certificate>
+        </DbInterface>
+        <DbInterface xsi:type="DBSourceGenericDb" k2StudioObjectName="Oracle1" dbType="genericdb" active="true">
+          <dbHost>34.89.246.193</dbHost>
+          <dbPort>1433</dbPort>
+          <dbScheme>XEPDB1</dbScheme>
+          <dbUser>Customer</dbUser>
+          <dbPasswordEncrypted>~encs2~GPAoz2J4vPYKd30ViICWIb5hlRqvHV8SvKOr0dtpoCGfLpO8QdXwo0azSQ&#x3D;&#x3D;</dbPasswordEncrypted>
+          <connString>jdbc:oracle:thin:@34.89.246.193:1433/XEPDB1</connString>
+          <minConnectionsNumber>0</minConnectionsNumber>
+          <maxConnectionsNumber>60</maxConnectionsNumber>
+          <JdbcDriverName>Oracle</JdbcDriverName>
+          <IsCustomConnectionStringServerSide>false</IsCustomConnectionStringServerSide>
         </DbInterface>
         <DbInterface xsi:type="DBSourceGenericDb" k2StudioObjectName="POSTGRESQL_ADMIN" dbType="genericdb" active="true">
           <dbHost>34.89.246.193</dbHost>
@@ -442,18 +457,6 @@
           <JdbcDriverName>PostgreSQL</JdbcDriverName>
           <IsCustomConnectionStringServerSide>false</IsCustomConnectionStringServerSide>
         </DbInterface>
-        <DbInterface xsi:type="DBSourceGenericDb" k2StudioObjectName="Oracle1" dbType="genericdb" active="true">
-          <dbHost>34.89.246.193</dbHost>
-          <dbPort>1433</dbPort>
-          <dbScheme>XEPDB1</dbScheme>
-          <dbUser>Customer</dbUser>
-          <dbPasswordEncrypted>~encs2~GPAoz2J4vPYKd30ViICWIb5hlRqvHV8SvKOr0dtpoCGfLpO8QdXwo0azSQ&#x3D;&#x3D;</dbPasswordEncrypted>
-          <connString>jdbc:oracle:thin:@34.89.246.193:1433/XEPDB1</connString>
-          <minConnectionsNumber>0</minConnectionsNumber>
-          <maxConnectionsNumber>60</maxConnectionsNumber>
-          <JdbcDriverName>Oracle</JdbcDriverName>
-          <IsCustomConnectionStringServerSide>false</IsCustomConnectionStringServerSide>
-        </DbInterface>
       </DbInterfacesList>
       <GlobalsList>
         <Global name="INSTANCES_RANDOM_MAX" luName="TDM">
@@ -748,7 +751,7 @@
             </Property>
           </Properties>
         </GenericInterface>
-        <GenericInterface type="HTTP" enabled="true" version="">
+        <GenericInterface type="HTTP" enabled="false" version="">
           <Name>AI_Execution</Name>
           <Properties>
             <Property name="ProtocolType">
@@ -798,6 +801,9 @@
             </Property>
             <Property name="Certificate">
               <Value></Value>
+            </Property>
+            <Property name="testConnectionState">
+              <Value>error</Value>
             </Property>
           </Properties>
         </GenericInterface>
