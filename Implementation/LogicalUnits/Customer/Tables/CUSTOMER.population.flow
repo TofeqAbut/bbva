@@ -1,0 +1,122 @@
+stages:
+  Input:
+    actors:
+      PopulationArgs:
+        parent: PopulationArgs
+        readonly: true
+        in:
+          CUSTOMER_ID:
+            external: CUSTOMER_ID
+            schema: any
+            mandatory: false
+          FIRST_NAME:
+            external: FIRST_NAME
+            schema: any
+            mandatory: false
+          LAST_NAME:
+            external: LAST_NAME
+            schema: any
+            mandatory: false
+          EMAIL:
+            external: EMAIL
+            schema: any
+            mandatory: false
+          PHONE:
+            external: PHONE
+            schema: any
+            mandatory: false
+          CREATED_AT:
+            external: CREATED_AT
+            schema: any
+            mandatory: false
+      SyncDeleteMode:
+        parent: SyncDeleteMode
+        in:
+          interface:
+            schema: any
+          table:
+            const: null
+            external: table
+  Source:
+    actors:
+      Query:
+        parent: SourceDbQuery
+        in:
+          interface:
+            const: Oracle1
+          sql:
+            const: select * from CUSTOMER.CUSTOMER
+          parent_rows:
+            link: PopulationArgs/parent_rows
+        out:
+          result:
+            schema: '#ref'
+  Stage 1: {
+    }
+  LU Table:
+    last: 1
+    actors:
+      CUSTOMER:
+        parent: DbLoad
+        in:
+          interface:
+            const: fabric
+          schema:
+            const: null
+            external: schema
+          table:
+            const: null
+            external: table
+          fields:
+            const:
+            - CUSTOMER_ID
+            - FIRST_NAME
+            - LAST_NAME
+            - EMAIL
+            - PHONE
+            - CREATED_AT
+          keys:
+            const:
+            - CUSTOMER_ID
+          dialect:
+            const: sqlite
+          CUSTOMER_ID:
+            schema: any
+          FIRST_NAME:
+            schema: any
+          LAST_NAME:
+            schema: any
+          EMAIL:
+            schema: any
+          PHONE:
+            schema: any
+          CREATED_AT:
+            schema: any
+          params:
+            link:
+              path: Query/result
+              iterate: Iterate
+  Post Load: {
+    }
+schemas:
+  Query.out.result:
+    type: object
+    properties:
+      CUSTOMER_ID:
+        type: {
+          }
+      FIRST_NAME:
+        type: {
+          }
+      LAST_NAME:
+        type: {
+          }
+      EMAIL:
+        type: {
+          }
+      PHONE:
+        type: {
+          }
+      CREATED_AT:
+        type: {
+          }
